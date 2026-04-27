@@ -97,7 +97,8 @@ persistence:
   storageClassName: gp3
 pgdataSubdir: pgdata
 
-nodeSelector: {}
+nodeSelector: 
+  role: ops
 
 tolerations: 
   - effect: NoSchedule
