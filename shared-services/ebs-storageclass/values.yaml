@@ -1,0 +1,15 @@
+storageClass:
+  name: gp3
+  isDefault: true
+
+  provisioner: ebs.csi.aws.com
+  volumeBindingMode: WaitForFirstConsumer
+  allowVolumeExpansion: true
+  reclaimPolicy: Delete
+
+  parameters:
+    type: gp3
+    fstype: ext4
+
+  # 필요시 추가 어노테이션 (기본은 없음)
+  annotations: {}

@@ -1,0 +1,26 @@
+nameOverride: "cert-manager"
+fullnameOverride: "cert-manager"
+
+tolerations: 
+  - key: role
+    operator: Equal
+    value: ops
+    effect: NoSchedule
+
+webhook:
+  tolerations: 
+    - key: role
+      operator: Equal
+      value: ops
+      effect: NoSchedule
+
+cainjector:
+  tolerations:
+    - key: role
+      operator: Equal
+      value: ops
+      effect: NoSchedule
+
+startupapicheck:
+  tolerations: 
+    - operator: Exists

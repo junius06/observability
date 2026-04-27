@@ -1,0 +1,11 @@
+nameOverride: "external-secrets"
+fullnameOverride: "external-secrets"
+
+global:
+  tolerations:
+  - key: role
+    operator: Equal
+    value: ops
+    effect: NoSchedule
+
+revisionHistoryLimit: 3
